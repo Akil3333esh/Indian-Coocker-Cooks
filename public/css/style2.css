@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+header .header{
+  background-color: #fff;
+  height: 45px;
+}
+header a img{
+  width: 134px;
+margin-top: 4px;
+}
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.login-page .form .login{
+  margin-top: -31px;
+margin-bottom: 26px;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background-color: honeydew;
+  border-radius: 10%;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(250, 245, 245, 0.2), 0 5px 5px 0 rgba(223, 216, 216, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #0f212b;
+ 
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: bolder;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 0%;
+}
+.login-form:hover{
+    color: #0e1214;
+    font-size: medium;
+    font-weight: 100;
+}
+
+.form button:hover :link{
+    font-size: larger;
+    font-weight: 1000;
+    
+}
+.form .message {
+  margin: 15px 0 0;
+  color: red;
+  font-size: 12px;
+}
+.form .message a:hover{
+    color: red;
+    font-size: medium;
+    text-decoration: underline;
+}
+.form .message a {
+  color: red;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #0f212b;
+  
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.loader-container{
+  position: fixed;
+  top:0; left:0;
+  height:100%; 
+  width:100%;
+  z-index: 1000;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgb(129, 6, 6);
+  background-image: linear-gradient(45deg,#da0707,#f59e8e);
+}
+
+.loader-container img{
+  width:40rem;
+  
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 5%;
+}
+
+.loader-container.fade-out{
+  top:-110%;
+  opacity:0;
+}
+
+:root{
+  --green:#0ac969;
+  --black:#192a56;
+  --light-color:#666;
+  --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color:#fff;
+  background: var(--black);
+  border-radius: .5rem;
+  cursor: pointer;
+  padding:.8rem 3rem;
+  text-decoration: none;
+}
+
+.btn:hover{
+  background: var(--green);
+  letter-spacing: .1rem;
+}
+

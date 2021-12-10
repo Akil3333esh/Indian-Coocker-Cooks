@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+@font-face{
+    font-family: 'Booter - Zero Zero';
+    src: url('fonts/Booter - Zero Zero.woff') format('woff'),
+        url('Fonts/Booter - Zero Zero.woff2') format('woff2');
+        /* src: url('fonts/Booter\ -\ Zero\ Zero.woff') format('woff'),
+        url('Fonts/Booter\ -\ Zero\ Zero.woff2') format('woff2');*/
+        font-weight: normal;
+        font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: #777;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.nav ul{
+ margin: 0;
+}
+
+.nav li{
+    /* using this display we add padding to left right only */
+    display: inline;
+}
+
+.nav a{
+    /* using this display we add padding to top bottom and left right */
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    /* to remove underline */
+    text-decoration: none;
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.main-nav li{
+    padding: 0 5%;
+}
+
+.main-header{
+    /* since original had darker hue so used background color  we ahve black with 60% transparency*/
+    background-color: rgba(0, 0, 0, .6);
+    background-image: url(Images/Header\ Background.jpg);
+    /* background-image: url(Images/Header Background.jpg); */
+    /* since both background-color and background-image can't be used we need blend mode to blend these together */
+    background-blend-mode: multiply; /*used multiply to combine these */
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+
+
+.main-footer-container{
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul{
+    /* take as much space it can */
+ flex-grow: 1;
+ text-align: end;
+}
+
+.footer-nav li{
+    padding: 0 0.5em;
+}
+
+.footer-nav img{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.btn-header{
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    /* removing rounded corner */
+    border-radius: 0; 
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+
+
+.btn-play{
+    display: block;
+    margin: 0 auto;
+    color: #2D9CDB;
+    font-size: 4em;
+    border-radius: 50%;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.section-header{
+    font-weight: 900;
+    font-size: 1.2em;
+    color: blue;
+    text-align: center;
+}
+
+
+.cart-header{
+    font-weight: 900;
+    font-size: 1.2em;
+    color: blue;
+}
+
+.cart-column{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row{
+    display: flex;
+}
+
+.cart-item{
+    width: 45%;
+    font-size: 2.2em;
+}
+
+.cart-price{
+    width: 40%;
+    font-size: 3.2em;
+    color: white;
+}
+
+.cart-quantity{
+  width: 35% ;
+  font-size: 3.2em;
+  
+}
+
+.cart-item-title{
+    color: white;
+    margin: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image{
+    width: 75px;
+    height: 75px;
+    border-radius: 100px;
+    border:.1rem solid rgb(250, 8, 8);
+    
+}
+
+.btn-danger{
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover{
+    background-color: red;
+}
+
+.cart-quantity-input{
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #0f212b;
+    padding: 0;
+    text-align: center;
+    font-size: 0.7em;
+    margin-right: 25px;
+
+}
+
+.cart-row:last-child{
+    border-bottom: 1px solid white;
+}
+
+.cart-row:last-child .cart-column{
+    border: none;    
+}
+
+.cart-total{
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;    
+}
+
+.cart-total-title{
+    color:white;
+    font-weight: bold;
+    font-size: 3.5em;
+    margin-right: 20px;
+}
+
+.cart-total-price{
+    color: white;
+    font-size: 2.1em;
+}
+
+.btn-purchase{
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
