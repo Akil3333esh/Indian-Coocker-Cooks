@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style2.css">
+<link rel = "icon" href = "images/logo2.jpg"  type = "image/x-icon">
+<meta http-equiv="refresh" content="60">
+<title>Sign Up</title>
+</head>
+<body>
+  
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3 ><b style="font-size:xx-large;">SIGN UP</b></h3>
+            <p>Please enter your details.</p>
+          </div>
+        </div>
+        <form class="login-form" action="/sign_up" method="POST" onsubmit="myFunction()">
+          <input type="text" placeholder="First name" id="fname" name="fname" title="Please enter valid First Name" required>
+          <input type="text" placeholder="Last name" id="lname" name="lname" title="Please enter valid Last Name" required>
+          <input type="tel" placeholder="Phone Number" id="phno" name="phno" title="Please enter valid phone number of 10 numbers" pattern="[0-9]{10}" required>
+          <input type="email" placeholder="Email" id="email" name="email" title="Please enter valid email *ex = abc@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.com" required>
+          <input type="password" placeholder="Password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+          
+
+          <button><b>Sign Up</b></button>
+          <h2>Continue With Google</h2>
+          <a class="btn btn-outline-dark" href="/google/auth" role="button" style="text-transform:none;background-color: honeydew">
+                <img width="50px"  style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+              </a>
+          <p class="message">Already a member? <a href="login.html">Log In</p>
+          
+        </form>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        alert("Thanks for Signing Up!!");
+      }
+      </script>
+</body>
+
+</html>

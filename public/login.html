@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style2.css">
+<link rel = "icon" href = "images/logo2.jpg"  type = "image/x-icon">
+<title>Sign In or Log In</title>
+
+</head>
+<body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3 ><b style="font-size:xx-large;">LOG IN</b></h3>
+            <p>Please enter your credentials to Login.</p>
+          </div>
+        </div>
+        <form class="login-form" action="/login" method="POST" autocomplete="on">
+          <input type="text" placeholder="Enter your email" name="email" id="email" required >
+          <input type="password" placeholder="password" name="password" id="password" required >
+          <button><b>Log In</b></button>
+          
+          <a class="btn btn-outline-dark" data-onsuccess="onSignIn" href="/google/auth" role="button" style="text-transform:none;background-color: honeydew">
+                <img width="50px"  style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+              </a>
+          <p class="message" style="font-weight: 700;">Forgot password? <a  href="forget.html">Click here</a></p>
+          <p class="message" style="font-weight: 700;">Not a member? <a href="signup.html">Sign Up</a></p>
+          
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" >
+      function preventBack(){window.history.forward();}
+       setTimeout("preventBack()", 0);
+       window.onunload=function(){null};
+   </script>
+</body>
+
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style2.css">
+<link rel = "icon" href = "images/logo2.jpg"  type = "image/x-icon">
+<title>Forget Password</title>
+
+</head>
+<body>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3 ><b style="font-size:xx-large;">Forgot Password</b></h3>
+            <p>Please enter your email to send reset link.</p>
+          </div>
+        </div>
+        <form class="login-form" action="/forget" method="POST" >
+          <input type="text" placeholder="Enter your email" name="email" id="email"   title="Please enter valid email *ex = abc@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.com" required >
+          <button><b>Submit</b></button>
+          <p class="message" style="font-weight: 700;">Already have an account? <a  href="login.html">Log In</a></p>
+          <p class="message" style="font-weight: 700;">Not a member? <a href="signup.html">Sign Up</a></p>
+          
+        </form>
+      </div>
+    </div>        
+</body>
+</body>
+</html>
