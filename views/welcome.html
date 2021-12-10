@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="60">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndianCookerCooks Official food ordering website</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel = "icon" href = "images/logo2.jpg"  type = "image/x-icon">
+    <script src="js/store.js" async></script>
+    <link rel="stylesheet" href="css/styles.css">   
+    <link rel="stylesheet" href="css/search.css"> 
+      
+</head>
+<body style="background-color: #0f212b;">
+    
+<!-- header section starts      -->
+
+<header style="background-color: #0f212b;">
+    
+    <a href="index.html" class="logo" ><img style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);border-radius: 100%;" src="images/logo2.jpg" height="40" width="40">  Indian Coocker Cooks</a>
+    
+    <nav class="navbar">
+        <a href="#" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">home</a>
+        <a href="#dishes" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">dishes</a>
+        
+          <a href="#order" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">order</a>
+        <a href="#review" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">review</a>
+        
+        <a href="#about" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">about</a>
+    </nav>
+
+    
+    
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <div class="dropdown">
+            <i class="fa fa-compass fa-lg" style="float:right" onclick="myFunction()"></i>
+            <br><br>
+        <div class="dropdown-content" id="myDropdown">
+            <a  href="/items#tea">tea and Coffees</a>
+            <a  href="/tiffins#tiffins">tiffins and salads</a>
+            <a  href="/pizzas#pizzas">pizza and burgers</a>
+            <a  href="/rotis#rotis">roti and curries</a>
+            <a  href="/starters#starters">starters</a>
+            <a  href="/rices#rices">rices</a>
+            <a  href="/cakes#cakes">cakes</a>
+            <a  href="/drinks#drinks">drinks and juices</a>
+            <a  href="/icecreams#icecreams">icecreams</a>
+        </div>
+    </div>
+    <a href="#order" class="fas fa-shopping-cart "></a>
+    <a href="/profile" class="fas fa-user"></a>
+    </div>
+    
+    <form action="/logout" method="get">
+    <button class="btn fa fa-power-off" ></button>
+</form>
+
+</header>
+
+<!-- header section ends-->
+
+<!-- home section starts  -->
+
+<section class="home" id="home" >
+
+    <div class="swiper-container home-slider">
+        
+        <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span><b>our special dish</b></span>
+                    <h3>spicy noodles</h3>
+                    <p><span style="color:red">Spicy Vegetable Noodles </span>is a one pot meal that is spicy and delicious with the goodness of fresh spring vegetables like snow peas, sweet corn, carrots, baby corn, broccoli and other ingredients like scrambled eggs, button mushrooms,panner and spring onions. Serve the Spicy Vegetable Noodles Recipe as a weeknight dinner along with a bowl of soup like <span style="color:red">Cumin Spiced Potato And Leek Soup Recipe.</span></p>
+                    <a href="/rices" class="btn">order now</a>
+                </div>
+                <div class="image">
+                    <img src="images/home-img-1.png" alt="">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span><b>our special dish</b></span>
+                    <h3>fried chicken</h3>
+                    <p><span style="color:red">Southern fried chicken</span>, also known simply as fried chicken, is a dish consisting of chicken pieces that have been coated with seasoned flour or batter and pan-fried, deep fried, pressure fried, or air fried. The breading adds a crisp coating or crust to the exterior of the chicken while retaining juices in the meat.<span style="color:red"> Broiler chickens are most commonly used.</span></p>
+                    <a href="/starters" class="btn">order now</a>
+                </div>
+                <div class="image">
+                    <img src="images/home-img-2.png" alt="">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span><b>our special dish</b></span>
+                    <h3>hot pizza</h3>
+                    <p><span style="color:red">Pizza</span> is an Italian dish consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients such as anchovies, mushrooms, onions, olives, pineapple, meat,<span style="color: red;">Our's secret spices</span>  etc., which is then baked at a high temperature.</p>
+                    <a href="/pizzas" class="btn">order now</a>
+                </div>
+                <div class="image">
+                    <img src="images/home-img-3.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- dishes section starts  -->
+
+<section class="dishes" id="dishes" style="box-shadow: 0px 8px 16px 0px rgb(252, 5, 5);">
+    <form action="/home" method="get">
+    <h3 class="sub-heading"> our dishes </h3>
+    <h1 class="heading"> popular dishes </h1>
+
+    <div class="box-container">
+
+        <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(253, 6, 6, 0.973);">
+            
+            <img class="shop-item-image" src="images/dish-1.png" alt="">
+            <h3 class="shop-item-title">Burger</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+            ₹<span class="shop-item-price">199</span>/-
+            <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+        </div>
+        </div>
+
+        <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(253, 5, 5, 0.952);">
+            
+            
+            <img class="shop-item-image" src="images/dish-2.png" alt="">
+            <h3 class="shop-item-title">10Pcs Chicken Nuggets</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+            ₹<span class="shop-item-price">249</span>/-
+            <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+        </div>
+        </div>
+
+        <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(250, 7, 7, 0.993);">
+            
+            
+            <img class="shop-item-image" src="images/dish-3.png" alt="">
+            <h3 class="shop-item-title">Southern Fried Chicken</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+            ₹<span class="shop-item-price">499</span>/-
+            <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+        </div>
+        </div>
+
+        <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 6, 6, 0.979);">
+            
+            
+            <img class="shop-item-image" src="images/dish-4.png" alt="">
+            <h3 class="shop-item-title">Pepporoni Pizza</h3>
+            <br>
+            <h4>Regular</h4>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+            ₹<span class="shop-item-price">249</span>/-
+            <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+        </div>
+        </div>
+
+        <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.993);">
+            
+            
+            <img class="shop-item-image" src="images/dish-5.png" alt="">
+            <h3 class="shop-item-title">Choco Punch</h3>
+            <br>
+            <h4>Desert</h4>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+            ₹<span class="shop-item-price">149</span>/-
+            <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+        </div>
+        </div>
+
+        <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+            
+            
+            <img class="shop-item-image" src="images/dish-6.png" alt="">
+            <h3 class="shop-item-title">2Pcs Crispy Chicken Legs</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+                ₹<span class="shop-item-price">99</span>/-
+            <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+        </div>
+        </div>
+
+    </div>
+</form>
+</section>
+
+<!-- dishes section ends -->
+
+<!-- menu and search section starts  -->
+
+<section class="menu" id="menu" >
+
+    <h1 class="heading"> our menu </h1>
+    <br><br>
+    <form action="/search#search" method="get">
+    <div class="wrap">
+        <div class="search">
+           <input type="text" id="search" name="search" class="searchTerm" placeholder="What are you looking for?...........">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search" style="color: #0f212b;"></i>
+          </button>
+        </div>
+     </div>
+     <br><br><br><br>
+     <div class="box-container" >
+        {{#search}}
+        <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+            <img class="shop-item-image" src="images/{{fileInput}}" alt="">
+            <h3 class="shop-item-title">{{pname}}</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+            ₹<span class="shop-item-price">{{price}}</span>/-
+            <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+        </div>
+        </div>
+        {{/search}}
+    </div>
+     </form>
+     <br><br>
+     
+    <h1 class="heading" id="tea">tea and coffees </h1>
+    <form action="/items" method="get">
+    <div class="box-container" >
+        {{#tea}}
+        <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+            <img class="shop-item-image" src="images/{{fileInput}}" alt="Indian Coocker Cooks">
+            <h3 class="shop-item-title">{{pname}}</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+            ₹<span class="shop-item-price">{{price}}</span>/-
+            <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+        </div>
+        </div>
+        {{/tea}}
+    </div>
+    </form>
+    <br><br>
+    <form action="/tiffins" method="get"> 
+    <h1 class="heading" id="tiffins"> tiffins and salads</h1>
+        <div class="box-container" >
+            {{#tiffin}}
+            <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <img class="shop-item-image" src="images/{{fileInput}}" alt="">
+                <h3 class="shop-item-title">{{pname}}</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+                ₹<span class="shop-item-price">{{price}}</span>/-
+                <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+                </div>
+            </div>
+            {{/tiffin}}
+        </div>
+    </form>
+    <br><br>
+    <form action="/pizzas" method="get">
+        <h1 class="heading" id="pizzas">pizzas and burgers</h1>
+        
+            <div class="box-container" >
+                {{#pizza}}
+                <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                    <img class="shop-item-image" src="images/{{fileInput}}" alt="">
+                    <h3 class="shop-item-title">{{pname}}</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+                    ₹<span class="shop-item-price">{{price}}</span>/-
+                    <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+                </div>
+                </div>
+                {{/pizza}}
+            </div>
+    </div>
+    </form>
+    <br><br>
+    <form action="/rotis" method="get">
+    <h1 class="heading" id="rotis">roti and curries</h1>
+    
+        <div class="box-container" >
+            {{#roti}}
+            <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <img class="shop-item-image" src="images/{{fileInput}}" alt="">
+                <h3 class="shop-item-title">{{pname}}</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+                ₹<span class="shop-item-price">{{price}}</span>/-
+                <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+            </div>
+            </div>
+            {{/roti}}
+        </div>
+    </form>
+    <br><br>
+    <form action="/starters" method="get">
+    <h1 class="heading" id="starters">starters</h1>
+    
+        <div class="box-container" >
+            {{#starters}}
+            <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <img class="shop-item-image" src="images/{{fileInput}}" alt="">
+                <h3 class="shop-item-title">{{pname}}</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+                ₹<span class="shop-item-price">{{price}}</span>/-
+                <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+            </div>
+            </div>
+            {{/starters}}
+        </div>
+    
+    </form>
+    <br><br>
+    <form action="/rices" method="get">
+    <h1 class="heading" id="rices">rices </h1>
+    
+        <div class="box-container" >
+            {{#rices}}
+            <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <img class="shop-item-image" src="images/{{fileInput}}" alt="">
+                <h3 class="shop-item-title">{{pname}}</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+                ₹<span class="shop-item-price">{{price}}</span>/-
+                <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+            </div>
+            </div>
+            {{/rices}}
+        </div>
+    </form>
+    <br><br>
+    <form action="/cakes" method="get">
+    <h1 class="heading" id="cakes"> cakes</h1>
+    
+        <div class="box-container" >
+            {{#cake}}
+            <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <img class="shop-item-image" src="images/{{fileInput}}" alt="">
+                <h3 class="shop-item-title">{{pname}}</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+                ₹<span class="shop-item-price">{{price}}</span>/-
+                <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+            </div>
+            </div>
+            {{/cake}}
+        </div>
+
+</form>
+<br><br>
+<form action="/drinks" method="get">
+    <h1 class="heading" id="drinks"> drinks and juices </h1>
+    
+        <div class="box-container" >
+            {{#drink}}
+            <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <img class="shop-item-image" src="images/{{fileInput}}" alt="">
+                <h3 class="shop-item-title">{{pname}}</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+                ₹<span class="shop-item-price">{{price}}</span>/-
+                <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+            </div>
+            </div>
+            {{/drink}}
+        </div>
+</form>
+<br><br>
+<form action="/icecreams" method="get">
+
+    <h1 class="heading" id="icecreams"> icecreams </h1>
+        <div class="box-container" >
+            {{#icecreams}}
+            <div class="box shop-item" style="background-color: #0f212b;box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <img class="shop-item-image" src="images/{{fileInput}}" alt="">
+                <h3 class="shop-item-title">{{pname}}</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="shop-item-details" style="color: var(--green);font-weight: bolder;margin-right: 1rem;font-size: 2.5rem;">
+                ₹<span class="shop-item-price">{{price}}</span>/-
+                <a class="btn btn-primary shop-item-button" role="button">add to cart</a>
+            </div>
+            </div>
+            {{/icecreams}}
+        </div>
+    </form>
+</section>
+<br><br>
+<!-- menu section ends -->
+
+
+<!-- cart-->
+<section class="content-section container order" id="order" autocomplete="on">
+    <form action="/order" method="post">
+    <h1 class="heading" >CART</h1>
+    <!--div tag so that all appear on same line i.e. item, price etc--> 
+    <div class="cart-row" >
+        <span class="cart-item cart-header cart-column" >ITEM</span>
+        <span class="cart-price cart-header cart-column" style="color: blue;">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>   
+    <!-- this div bcoz we were unable to have any last child for border-bottom line -->
+    <div class="cart-items" style="color: blue;">
+    </div>
+    <div class="cart-total" >
+        <span class="cart-total-title" style="color: blue;">Total</span>
+        <span  class="cart-total-price" style="color: blue;">₹0</span>
+        
+        
+    </div>
+        <!-- Order-->
+        <h1 class="heading" style="text-align: center;">Address Assist</h1>    
+    <iframe
+  width="850"
+  height="250"
+  frameborder="0" style="border: 2px;"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-nDGAUhqMq9Uby78yFf32ecEE0kwO6Mg&q=Place ID: ChIJSz5tqKbSNzoR7c8tPSQh7U4
+  Bhimavaram, Andhra Pradesh, India" >
+</iframe><br><br>
+        <div class="inputBox">
+            
+            <div class="input">
+                <span style="font-size: x-large;">Address</span>
+                <textarea placeholder="enter your address" id="add" name="add" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="input">
+                <span style="font-size: x-large;">Message and Reviews</span>
+                <textarea placeholder="enter your meassage and reviews" id="msg" name="msg" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+   
+        <button style="background-color: red;box-shadow: 0px 8px 16px 0px rgba(121, 6, 252, 0.979);width: 23cm;height: 1cm;color: #0f212b;font-weight:bolder;" class="btn">Order Now</button>
+        <!-- Order ends-->
+    </form>
+    
+</section>
+<!-- cart ends-->
+
+<!-- review section starts  -->
+
+<section class="review" id="review" style="border:.1rem solid rgb(250, 8, 8);">
+
+    <h3 class="sub-heading"> customer's review </h3>
+    <h1 class="heading"> what they say </h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper" >
+
+            <div class="swiper-slide slide" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/pic-1.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Akilesh</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come back here again and again.</p>
+            </div>
+
+            <div class="swiper-slide slide" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);"> 
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/pic-2.jpg" alt="">
+                    <div class="user-info">
+                        <h3>varunsai</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>It’s a great experience. The ambiance is very welcoming and charming. Amazing wines, food and service. Staff are extremely knowledgeable and make great recommendations.</p>
+            </div>
+
+            <div class="swiper-slide slide" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/pic-3.jpg" alt="">
+                    <div class="user-info">
+                        <h3>charani</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p> This place is great! Atmosphere is chill and cool but the staff is also really friendly. They know what they’re doing and what they’re talking about, and you can tell making the customers happy is their main priority. Food is pretty good, some italian classics and some twists, and for their prices it’s 100% worth it.</p>
+            </div>
+
+            <div class="swiper-slide slide" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/pic-4.jfif" alt="">
+                    <div class="user-info">
+                        <h3>viswanadh</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>Excellent food. Menu is extensive and seasonal to a particularly high standard. Definitely fine dining. It can be expensive but worth it and they do different deals on different nights so it’s worth checking them out before you book. Highly recommended.</p>
+            </div>
+
+            <div class="swiper-slide slide" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/pic-5.jfif" alt="">
+                    <div class="user-info">
+                        <h3>upendra</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>We are so fortunate to have this place just a few minutes drive away from home. Food is stunning, both the tapas and downstairs restaurant. Cocktails wow, wine great and lovely selection of beers. Love this place and will continue to visit.</p>
+            </div>
+
+            <div class="swiper-slide slide" style="box-shadow: 0px 8px 16px 0px rgba(252, 5, 5, 0.973);">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/pic-6.jfif" alt="">
+                    <div class="user-info">
+                        <h3>Murali</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>Amazing experience! If you thought gourmet kitchen will leave you hungry, think again. You should skip several meals before visiting this amazing restaurant. Everything is so tasty, you cannot restraint yourself from having all of the dishes.</p>
+            </div>
+
+
+        </div>
+
+    </div>
+    
+</section>
+
+<!-- review section ends -->
+
+
+
+
+
+<!-- about section starts  -->
+
+<section class="about" id="about" style="border:.1rem solid rgb(250, 8, 8);">
+
+    <h3 class="sub-heading"> about us </h3>
+    <h1 class="heading"> why choose us? </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/about-img.png" alt="">
+        </div>
+
+        <div class="content">
+            <h3>best food in the country</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, sequi corrupti corporis quaerat voluptatem ipsam neque labore modi autem, saepe numquam quod reprehenderit rem? Tempora aut soluta odio corporis nihil!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, nemo. Sit porro illo eos cumque deleniti iste alias, eum natus.</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>free& fast delivery</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>easy payments</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 service</span>
+                </div>
+            </div>
+            <a href="#" class="btn" >learn more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer" style="border:.1rem solid rgb(250, 8, 8);">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>locations</h3>
+            <a href="#">india</a>
+            <a href="#">japan</a>
+            <a href="#">russia</a>
+            <a href="#">USA</a>
+            <a href="#">france</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#dishes">dishes</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#review">reivew</a>
+            <a href="#order">order</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">9391375799</a>
+            <a href="#">9177134599</a>
+            <a href="#">mallaakilesh@gmail.com</a>
+            <a href="#">varunsai@gmail.com</a>
+            <a href="#">charani@gmail.com</a>
+            <a href="#">upendra@gmail.com</a>
+            <a href="#">viswanadh@gmail.com</a>
+            <a href="#">venkatamurali@gmail.com</a>
+            <a href="#">Bhimavaram, india - 534201</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+
+    <div class="credit"> copyright @ 2021 by <span style="color:red"><b>Akilesh and team</b></span></div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- loader part  -->
+<div  class="loader-container">
+    <img src="images/food2.gif" alt="">
+</div>
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script type="text/javascript" >
+    function preventBack(){window.history.forward();}
+     setTimeout("preventBack()", 0);
+     window.onunload=function(){null};
+ </script>
+</body>
+</html>
