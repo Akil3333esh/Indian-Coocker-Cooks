@@ -66,6 +66,7 @@ db.once('open',()=>console.log("Welcome to INDIAN COOCKER COOKS start ordering!!
 /* signup */
 app.post("/sign_up",(req,res)=>{
   sess = req.session;
+  
     var fname = req.body.fname;
     var lname = req.body.lname;
     var phno = req.body.phno;
@@ -96,9 +97,9 @@ app.post("/sign_up",(req,res)=>{
 })
 
 /* add admin */
-/* signup */
 app.post("/add-admin.html",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var fname = req.body.fname;
     var lname = req.body.lname;
     var phno = req.body.phno;
@@ -125,11 +126,14 @@ app.post("/add-admin.html",(req,res)=>{
     });
 
     return res.redirect('Admin_success.html')
-
+  } else {
+    res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+  }
 })
 /* upd-admin */
 app.post("/upd-admin.html",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var email = req.res.body;
     var spassword = req.res.spassword;
     
@@ -147,11 +151,15 @@ app.post("/upd-admin.html",(req,res)=>{
         console.log("Admin added Successfully");
         return res.redirect('Admin_success.html')
   });
+} else {
+  res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+}
 })
 
 /* del user */
 app.post("/del-user.html",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var email = req.body.email;
     var data = {
         "email": email,
@@ -163,6 +171,9 @@ app.post("/del-user.html",(req,res)=>{
         console.log("user deleted Successfully");
     return res.redirect('Admin_success.html')
     });
+  } else {
+    res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+  }
 })
 
 
@@ -171,6 +182,7 @@ app.post("/del-user.html",(req,res)=>{
 /* add item */
 app.post("/add-product.html",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var pname = req.body.pname;
     var category = req.body.category;
     var price = req.body.price;
@@ -189,11 +201,15 @@ app.post("/add-product.html",(req,res)=>{
         console.log("Item Inserted Successfully");
     });
     return res.redirect('Insert_success.html')
+  } else {
+    res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+  }
 })
 
 /* delete item */
 app.post("/del-product.html",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var pname = req.body.pname;
     var data = {
         "pname": pname,
@@ -205,6 +221,9 @@ app.post("/del-product.html",(req,res)=>{
         console.log("Item deleted Successfully");
     return res.redirect('Insert_success.html')
     });
+  } else {
+    res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+  }
 })
 
 
@@ -212,6 +231,7 @@ app.post("/del-product.html",(req,res)=>{
 /* update item */
 app.post("/upd-product.html",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var upname = req.body.upname;
     var pname = req.body.pname;
     var category = req.body.category;
@@ -235,10 +255,14 @@ app.post("/upd-product.html",(req,res)=>{
         console.log("Item updated Successfully");
         return res.redirect('Insert_success.html')
   });
+} else {
+  res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+}
 })
 /* order */
 app.post("/order",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var Uname = (sess.fname + ' ' + sess.lname);
     var Unum = sess.phno;
     var email = sess.email;
@@ -266,6 +290,9 @@ app.post("/order",(req,res)=>{
       } catch (err){
 res.send('Invalid Order')
       }});
+    } else {
+      res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+    }
 })
 
 
@@ -337,6 +364,7 @@ app.post("/login",(req,res)=>{
 /* search */
 app.get("/search",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
   var regex = req.query.search;
   
     var resultArray = [];
@@ -358,7 +386,9 @@ app.get("/search",(req,res)=>{
         }
        
       });
-
+    } else {
+      res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+    }
 }) 
 
 /* tea and coffees */
@@ -715,6 +745,7 @@ font-weight: 700;
 /* Tiffins and Salads */
 app.get("/tiffins",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var resultArray = [];
     var cursor = db.collection('products').find({category:'Tiffins and Salads'});
     cursor.forEach(function(doc){
@@ -727,12 +758,16 @@ app.get("/tiffins",(req,res)=>{
         console.log({tiffin : resultArray})
         
       });
+    } else {
+      res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+    }
       
 })
 
 /* pizzas */
 app.get("/pizzas",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var resultArray = [];
     var cursor = db.collection('products').find({category:'Pizzas and Burgers'});
     cursor.forEach(function(doc){
@@ -744,13 +779,16 @@ app.get("/pizzas",(req,res)=>{
         res.render('welcome',{pizza : resultArray});
         console.log({pizza : resultArray})
       });
-      
+    } else {
+      res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+    }
 })
 
 /* rotis */
 
 app.get("/rotis",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var resultArray = [];
     var cursor = db.collection('products').find({category:'roti and curries'});
     cursor.forEach(function(doc){
@@ -762,6 +800,9 @@ app.get("/rotis",(req,res)=>{
         res.render('welcome',{roti : resultArray});
 console.log({roti : resultArray})
       });
+    } else {
+      res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+    }
       
 })
 
@@ -769,6 +810,7 @@ console.log({roti : resultArray})
 
 app.get("/starters",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var resultArray = [];
     var cursor = db.collection('products').find({category:'starters'});
     cursor.forEach(function(doc){
@@ -780,12 +822,15 @@ app.get("/starters",(req,res)=>{
         res.render('welcome',{starters : resultArray});
 console.log({starters : resultArray})
       });
-      
+    } else {
+      res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+    }
 })
 /* rices */
 
 app.get("/rices",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var resultArray = [];
     var cursor = db.collection('products').find({category:'rices'});
     cursor.forEach(function(doc){
@@ -797,12 +842,15 @@ app.get("/rices",(req,res)=>{
         res.render('welcome',{rices : resultArray});
 console.log({rices : resultArray})
       });
-      
+    } else {
+      res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+    }
 })
 
 /* cakes */
 app.get("/cakes",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var resultArray = [];
     var cursor = db.collection('products').find({category:'cake'});
     cursor.forEach(function(doc){
@@ -814,12 +862,15 @@ app.get("/cakes",(req,res)=>{
         res.render('welcome',{cake : resultArray});
 console.log({cake : resultArray})
       });
-      
+    } else {
+      res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+    }
 })
 /* drinks */
 
 app.get("/drinks",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var resultArray = [];
     var cursor = db.collection('products').find({category:'drinks and juices'});
     cursor.forEach(function(doc){
@@ -831,12 +882,15 @@ app.get("/drinks",(req,res)=>{
         res.render('welcome',{drink : resultArray});
 console.log({drink : resultArray})
       });
-      
+    } else {
+      res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+    }
 })
 
 /* icecreams */
 app.get("/icecreams",(req,res)=>{
   sess = req.session;
+  if (sess.loggedin){
     var resultArray = [];
     var cursor = db.collection('products').find({category:'icecreams'});
     cursor.forEach(function(doc){
@@ -848,7 +902,9 @@ app.get("/icecreams",(req,res)=>{
         res.render('welcome',{icecreams : resultArray});
         console.log({icecreams : resultArray})
       });
-      
+    } else {
+      res.send(`<center><h1>Please login to view this page!<br><br><a href="/login.html">Login</a></h1><center>`)
+    }
 })
 
 
