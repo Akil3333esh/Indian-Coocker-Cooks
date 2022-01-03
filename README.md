@@ -23,4 +23,4 @@ Steps to run the project(Indian Coocker Cooks) :-
 
 ---------------------------------------------------------
 
--> Here the database we used is Mongo DB atlas cluster, so everyone can view the databse by the link :- `mongodb+srv://Akilesh:Akil3333esh@cluster-food-order.ofcfl.mongodb.net/test`
+-> Here the database we used is Mongo DB atlas cluster, so everyone can view the database using this link :- `mongodb+srv://Akilesh:Akil3333esh@cluster-food-order.ofcfl.mongodb.net/test`
